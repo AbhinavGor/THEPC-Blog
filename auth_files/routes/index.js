@@ -14,8 +14,8 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
 );
 
 router.post('/submit', ensureAuthenticated, (req, res) =>{
-  const {atitle, acontent} = req.body;
-  const newArticle = new Article({ atitle, acontent});
+  const {email, atitle, acontent} = req.body;
+  const newArticle = new Article({email, atitle, acontent});
   newArticle.save().then(user => {
     req.flash(
       'success_msg',

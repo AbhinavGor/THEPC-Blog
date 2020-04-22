@@ -1,5 +1,6 @@
 <h1 class="mt-4">Dashboard</h1>
 <p >Welcome <%= user.name %></p>
+<p>Your registered email is <span name='email' value = "<%= user.email %>"><%= user.email %></span></p>
 
 <form action = "/submit" method="POST">
   <div class="form-group">
